@@ -1,0 +1,66 @@
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+build/
+Build/
+out/
+x64/
+x86/
+Debug*/
+Release*/
+Debug/
+Release/
+
+# Visual C++ files
+*.VC.db
+*.VC.VC.opendb
+*.pdb
+*.idb
+*.ipdb
+
+# Visual Studio generated files
+*.vcxproj.user
+*.vcxproj.filters
+*.vcxproj.*.user
+*.vcxproj.*.filters
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+build/
+
+# Output / artifacts (binary outputs)
+*.exe
+*.dll
+*.lib
+*.obj
+*.o
+*.so
+*.dylib
+
+# Logs, temporary files
+*.log
+*.tmp
+*.temp
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Generated test output / example binary output
+outlet.out
+*.out
+*.bin
