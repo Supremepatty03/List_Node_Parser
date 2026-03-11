@@ -11,21 +11,21 @@ struct ListNode {
 	ListNode* next = nullptr;
 	ListNode* rand = nullptr;
 
-	std::string data;
+	string data;
 };
 
 struct ParseResult {
-    std::vector<std::unique_ptr<ListNode>> nodes;
-    std::vector<int32_t> rand_indices;
+    vector<ListNode> nodes;
+    vector<int32_t> rand_indices;
 
-    ListNode* head () const { return nodes.empty () ? nullptr : nodes.front ().get (); }
+    ListNode* head () const { return nodes.empty () ? nullptr : const_cast< ListNode* >( &nodes.front () ); }
 };
 
 class IListParser {
 public:
     virtual ~IListParser () = default;
 
-    virtual ParseResult parse ( std::istream& in ) = 0;
+    virtual ParseResult parse ( istream& in ) = 0;
 
-    virtual ParseResult parseFile ( const std::string& filename ) = 0;
+    virtual ParseResult parseFile ( const string& filename ) = 0;
 };

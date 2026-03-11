@@ -3,17 +3,19 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 class ILogger {
 public:
     virtual ~ILogger () = default;
-    virtual void info ( const std::string& msg ) = 0;
-    virtual void warn ( const std::string& msg ) = 0;
-    virtual void error ( const std::string& msg ) = 0;
+    virtual void info ( const string& msg ) = 0;
+    virtual void warn ( const string& msg ) = 0;
+    virtual void error ( const string& msg ) = 0;
 };
 
 class ConsoleLogger : public ILogger {
 public:
-    void info ( const std::string& msg ) override { std::cerr << "[INFO] " << msg << "\n"; }
-    void warn ( const std::string& msg ) override { std::cerr << "[WARN] " << msg << "\n"; }
-    void error ( const std::string& msg ) override { std::cerr << "[ERROR] " << msg << "\n"; }
+    void info ( const string& msg ) override { cerr << "[INFO] " << msg << "\n"; }
+    void warn ( const string& msg ) override { cerr << "[WARN] " << msg << "\n"; }
+    void error ( const string& msg ) override { cerr << "[ERROR] " << msg << "\n"; }
 };
